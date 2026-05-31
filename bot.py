@@ -59,6 +59,23 @@ def callback_query(call):
             bot.send_message(call.message.chat.id, f"🎰 *Лотерея:*\n\nСписание: -100 BC\nБилет оказался пустым. 💔\n\nТвой баланс: {user_balances[user_id]} BC", parse_mode="Markdown")
 
 print("Бот успешно запущен!")
-bot.infinity_polling()
+import os
+from threading import Thread
+from flask import Flask
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Бот работает!"
+
+def run_web_server():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+
+Thread(target=run_web_server).start()
+
+bot.polling(none_stop=True)
+
 
 
