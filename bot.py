@@ -23,8 +23,10 @@ def start_message(message):
     markup.add(btn1, btn2)
     markup.add(btn3)
     markup.add(btn4, btn5)
-    
-    bot.send_message(message.chat.id, "👋 Привет! Добро пожаловать в главное меню бота.", reply_markup=markup)
+    photo_url = 'https://i.imgur.com/gg3z3pN.png'
+    bot.send_photo(message.chat.id, photo_url, caption="🖐Добро пожаловать в бота!", reply_markup=markup)
+
+
 
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
