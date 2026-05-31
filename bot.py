@@ -24,7 +24,7 @@ def start_message(message):
     markup.add(btn3)
     markup.add(btn4, btn5)
     with open('1780200644977.png', 'rb') as photo:
-    bot.send_photo(message.chat.id, photo, caption="👋 Добро пожаловать в бота!", reply_markup=markup)
+        bot.send_photo(message.chat.id, photo, caption="👋 Добро пожаловать в бота!", reply_markup=markup)
 
 
 
