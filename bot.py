@@ -20,7 +20,7 @@ def run_fake_server():
     server.serve_forever()
 
 # НАСТРОЙКА БОТА
-TOKEN = '8658300916:AAFxHpS6hggx-Pe3TkB_mnBysnY6'
+TOKEN = '8658300916:AAFxHpS6hggx-Pe3TkB_mnBysnY6F5yrS9g'
 bot = telebot.TeleBot(TOKEN)
 
 # Хранилище данных
