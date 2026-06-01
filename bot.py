@@ -1,6 +1,4 @@
 # Не забудь в самый верх файла, где импорты, добавить: from datetime import datetime, timedelta
-from datetime import datetime, timedelta
-
 
 user_last_bonus = {}
 
@@ -54,6 +52,7 @@ def run_fake_server():
 threading.Thread(target=run_fake_server, daemon=True).start()
 import telebot
 import random
+from datetime import datetime, timedelta
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton,WebAppInfo
 
 TOKEN = '8658300916:AAFxHpS6hggx-Pe3TkB_mnBysnY6F5yrS9g'
